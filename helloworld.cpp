@@ -83,9 +83,7 @@ int main() {
 
 		//Handling Uniforms.
 		float timeValue = glfwGetTime();
-		float redValue = (sin(timeValue) / 2.0f) + 0.5f;
-		float greenValue = (sin(timeValue + 1) / 2.0f) + 0.5f;
-		float blueValue = (sin(timeValue + 2) / 2.0f) + 0.5f;
+		shader.setFloat("offset", sin(timeValue)*0.5f);
 		//int vertexColorLocation = glGetUniformLocation(shaderProgram, "theColor");
 		//glUniform4f(vertexColorLocation, redValue, greenValue, blueValue, 1.0f);
 
